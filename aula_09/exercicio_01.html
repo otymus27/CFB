@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Javascript</title>
+    <style>
+        body{
+            background-color: #cec3b4;
+            color: blue;
+            
+        }  
+
+        h1{
+            background-color: rgb(50, 122, 230);/*Comentário para CSS*/
+            color: rgb(128, 0, 128);
+            font: 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 09 - Introdução ao DOM</h1><!--Isso é um comentário para html-->
+    <p>Nesta aula iremos ver uma breve introdução sobre DOM.</p>
+    <p>Vamos estudar os principais seletores de elementos para navegar dentro da árvore DOM: </p> 
+    
+    <ul>
+        <li>por Marca</li>
+        <li>por ID</li>
+        <li>por Nome</li>
+        <li>por Classe</li>
+        <li>por Seletor</li>
+    </ul>
+
+    <p id=>1 - Selecionando um elemento por marca ou tag usando getElementsByTagName:</p>
+
+    <script>
+        var a = window.document.getElementsByTagName('p')[0]
+        window.document.write('Aqui peguei um elemento:'+ a.innerHTML +'<br>')
+        a.style.color='green'
+        
+    </script>
+
+    <p id="p1">2 - Selecionando um elemento por ID usando getElementsByID:</p>
+    <script>
+        var b = window.document.getElementById('p1')
+        window.document.write('Aqui peguei um elemento por ID:'+ b.innerHTML +'<br>')
+        b.style.color='black'
+        b.style.background='grey'
+        
+    </script>
+    <br>
+
+    <div name="msg">3 - Selecionando um elemento por Nome usando getElementsByName</div>
+    <script>
+        var c = window.document.getElementsByName('msg')[0]
+        window.document.write('Aqui peguei um elemento por nome: '+ c.innerText +'<br>')
+        c.style.background='orange'
+        c.style.color='red'        
+    </script>    
+    <br>
+
+    <div class="div">4 - Selecionando um elemento por Nome usando getElementsByclass</div>
+    <script>
+        var d = window.document.getElementsByClassName('div')[0]
+        window.document.write('Aqui peguei um elemento por classe: '+ d.innerText +'<br>')
+        d.style.background='green'
+        d.style.color='black'        
+    </script>  
+
+    <br>
+
+    <div class="div1">5 - Selecionando um elemento usando querySelector selecionando uma id ou classe</div>
+    <script>
+        var e = window.document.querySelector('div.div1')
+        window.document.write('Aqui peguei um elemento por classe: '+ e.innerText +'<br>')
+        e.style.background='yellow'
+        e.style.color='black'        
+    </script>  
+
+</body>
+</html>
