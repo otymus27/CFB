@@ -24,10 +24,13 @@ while (n <= 5){
 console.log("Fim do programa!!!")
 
 //--------------------------------------
-let a = 5
+let numero = 5
 let fatorial = 1
 
-while (a <= 5){
-  console.log(a * (a-fatorial))
-  a =a - 1
+while (fatorial < 5){
+  fatorial = (fatorial * (numero-1)) 
+  
+  numero--
 }
+
+console.log(fatorial)
